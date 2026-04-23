@@ -14,7 +14,7 @@ $$\det(A - \lambda I) = 0 \implies \lambda^2 - Tr(A)\lambda + \det(A) = 0$$
 where $Tr(A)$ is the trace and $\det(A)$ is the determinant of the system matrix.
 
 ### 2. Stability Classification
-Using the **Discriminant** ($\Delta = Tr(A)^2 - 4\det(A)$), the tool automatically classifies the equilibrium point at the origin:
+Using the **Discriminant** $\Delta = Tr(A)^2 - 4\det(A)$, the tool automatically classifies the equilibrium point at the origin:
 * **Saddle Point:** $\det(A) < 0$
 * **Spiral Sink/Source:** $\det(A) > 0$ and $\Delta < 0$
 * **Node Sink/Source:** $\det(A) > 0$ and $\Delta > 0$
