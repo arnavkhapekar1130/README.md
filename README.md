@@ -1,11 +1,11 @@
 # MA303 Project: Autonomous System Phase Portrait Analyzer
 
-## 📊 Project Overview
+## Project Overview
 This project is a Python-based computational tool designed to analyze and visualize the stability of 2D autonomous systems of linear differential equations. The tool handles systems of the form:
 $\dot{x} = ax + by$  
 $\dot{y} = cx + dy$
 
-## 🧠 The Mathematics
+## The Math
 The core of this tool is based on the **Stability Theorem for Linear Systems**. 
 
 ### 1. Eigenvalue Calculation
@@ -27,7 +27,7 @@ The tool overlays nullclines (where $\dot{x}=0$ or $\dot{y}=0$) to show where th
 * **Libraries:** NumPy (Matrix algebra) and Matplotlib (Streamplot visualization)
 * **Visuals:** I used the `streamplot` function because it uses numerical integration to accurately trace the trajectories, providing a much higher-quality visual than standard vector arrows.
 
-* ## 🧪 Comprehensive Testing Suite
+* ## Comprehensive Testing Suite
 
 The tool was validated against every major stability classification in the MA303 curriculum. By calculating the Trace ($T$), Determinant ($D$), and Discriminant ($\Delta = T^2 - 4D$), the program accurately identifies and plots the following cases:
 
@@ -57,12 +57,12 @@ The tool was validated against every major stability classification in the MA303
 
 #### Critical Cases
 | Saddle Point | Center |
-| :---: | :---: | :---: |
+| :---: | :---: |
 | ![Saddle Point](saddle_point.png) | ![Center](center.png) |
 
 ---
 
-## 📚 Mathematical Summary
+## Math Summary
 The tool maps these cases onto the **Poincaré Stability Diagram**. 
 * **$D < 0$**: Saddle Point
 * **$D > 0, \Delta > 0$**: Nodes (Sink if $T < 0$, Source if $T > 0$)
