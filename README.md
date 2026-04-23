@@ -26,3 +26,47 @@ The tool overlays nullclines (where $\dot{x}=0$ or $\dot{y}=0$) to show where th
 * **Language:** Python 3
 * **Libraries:** NumPy (Matrix algebra) and Matplotlib (Streamplot visualization)
 * **Visuals:** I used the `streamplot` function because it uses numerical integration to accurately trace the trajectories, providing a much higher-quality visual than standard vector arrows.
+
+* ## 🧪 Comprehensive Testing Suite
+
+The tool was validated against every major stability classification in the MA303 curriculum. By calculating the Trace ($T$), Determinant ($D$), and Discriminant ($\Delta = T^2 - 4D$), the program accurately identifies and plots the following cases:
+
+### 1. Test Case Matrix
+| Stability Type | a, b | c, d | Eigenvalues | Result |
+| :--- | :--- | :--- | :--- | :--- |
+| **Stable Node** | -3, 0 | 0, -1 | $-3, -1$ | Flow drains directly in. |
+| **Unstable Node** | 3, 0 | 0, 1 | $3, 1$ | Flow pushes directly out. |
+| **Stable Spiral** | -1, -2 | 2, -1 | $-1 \pm 2i$ | Inward swirling motion. |
+| **Unstable Spiral** | 1, 2 | -2, 1 | $1 \pm 2i$ | Outward swirling motion. |
+| **Saddle Point** | 1, 1 | 4, -2 | $2, -3$ | Attracted then repelled. |
+| **Center** | 0, 2 | -2, 0 | $0 \pm 2i$ | Perfect orbital loops. |
+| **Degenerate Node** | -2, 0 | 0, -2 | $-2, -2$ | Star-shaped sink. |
+
+---
+
+### 2. Visual Gallery
+*Note: Run the parameters above in `Math_Project.py` and upload the screenshots to this repository with the matching filenames below.*
+
+#### Nodes (Real Eigenvalues)
+| Stable Node | Unstable Node |
+| :---: | :---: |
+| ![Stable Node](stable_node.png) | ![Unstable Node](unstable_node.png) |
+
+#### Spirals (Complex Eigenvalues)
+| Stable Spiral | Unstable Spiral |
+| :---: | :---: |
+| ![Stable Spiral](stable_spiral.png) | ![Unstable Spiral](unstable_spiral.png) |
+
+#### Critical Cases
+| Saddle Point | Center | Degenerate Node |
+| :---: | :---: | :---: |
+| ![Saddle Point](saddle_point.png) | ![Center](center.png) |
+
+---
+
+## 📚 Mathematical Summary
+The tool maps these cases onto the **Poincaré Stability Diagram**. 
+* **$D < 0$**: Saddle Point
+* **$D > 0, \Delta > 0$**: Nodes (Sink if $T < 0$, Source if $T > 0$)
+* **$D > 0, \Delta < 0$**: Spirals (Sink if $T < 0$, Source if $T > 0$)
+* **$T = 0, D > 0$**: Center
