@@ -40,12 +40,10 @@ The tool was validated against every major stability classification in the MA303
 | **Unstable Spiral** | 1, 2 | -2, 1 | $1 \pm 2i$ | Outward swirling motion. |
 | **Saddle Point** | 1, 1 | 4, -2 | $2, -3$ | Attracted then repelled. |
 | **Center** | 0, 2 | -2, 0 | $0 \pm 2i$ | Perfect orbital loops. |
-| **Degenerate Node** | -2, 0 | 0, -2 | $-2, -2$ | Star-shaped sink. |
 
 ---
 
 ### 2. Visual Gallery
-*Note: Run the parameters above in `Math_Project.py` and upload the screenshots to this repository with the matching filenames below.*
 
 #### Nodes (Real Eigenvalues)
 | Stable Node | Unstable Node |
@@ -58,7 +56,7 @@ The tool was validated against every major stability classification in the MA303
 | ![Stable Spiral](stable_spiral.png) | ![Unstable Spiral](unstable_spiral.png) |
 
 #### Critical Cases
-| Saddle Point | Center | Degenerate Node |
+| Saddle Point | Center |
 | :---: | :---: | :---: |
 | ![Saddle Point](saddle_point.png) | ![Center](center.png) |
 
